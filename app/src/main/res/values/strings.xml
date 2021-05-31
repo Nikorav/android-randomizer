@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">randomizer</string>
+    <string name="value_min">Min</string>
+    <string name="value_max">Max</string>
+    <string name="text_generate">Generate</string>
 </resources>

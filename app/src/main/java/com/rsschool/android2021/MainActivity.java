@@ -7,7 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentTransaction;
 
-public class MainActivity extends AppCompatActivity implements OnTransferMinMax,OnTransferRandomNumber {
+public class MainActivity extends AppCompatActivity implements OnTransferMinMax, OnTransferRandomNumber {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnTransferMinMax,
     }
 
     private void openSecondFragment(int min, int max) {
-        final Fragment secondFragment = SecondFragment.newInstance(min,max);
+        final Fragment secondFragment = SecondFragment.newInstance(min, max);
         final FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
         transaction.replace(R.id.container, secondFragment).commit();
     }
