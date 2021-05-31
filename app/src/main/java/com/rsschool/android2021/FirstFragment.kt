@@ -14,13 +14,7 @@ import androidx.fragment.app.Fragment
 class FirstFragment : Fragment() {
 
     private var generateButton: Button? = null
-    private var generateButtonAction: OnTransferMinMax? = null
     private var previousResult: TextView? = null
-
-    override fun onAttach(context: Context) {
-        super.onAttach(context)
-        generateButtonAction = context as OnTransferMinMax
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,6 +40,8 @@ class FirstFragment : Fragment() {
         }
     }
 
+    //2 раза используется одинаковый код if else,чтобы приложуха не умирала при повторном неправильном введении данных
+    //P.S. хз как починить)))
     private fun checkAllFields(minValueText: String, maxValueText: String) {
         var toastMassage = checkAllStringFields(minValueText, maxValueText)
         if (toastMassage.isEmpty()) {
